@@ -1,0 +1,46 @@
+## TERMINAL BASICS
+
+## ANATOMY OF A COMMAND LINE THING
+
+`COMMAND -[FLAG] ARGUMENT`
+
+# CHANGE DIRECTORIES
+
+`cd [DIRECTORY_NAME]`
+
+# MAKE A DIRECTORY
+
+`mkdir [DIRECTORY_NAME]`
+
+# MAKE A NEW FILE
+
+`touch [NAME_OF_FILE]`
+
+# REMOVE A FILE
+
+`rm -rf [NAME_OF_FILE]`
+
+# LIST ALL CONTENTS
+
+`ls -a [DIRECTORY_NAME]`
+
+# MOVE A FILE
+
+`mv [FROM] [TO]`
+
+# COPY A FILE
+
+`cp -r [FROM] [TO]`
+
+# ACCES ROOT / GO HOME
+
+`~` symbol for home
+`cd ~` go home from anywhere
+
+# PRINT ALL CONTENTS TO TERMINAL
+
+`cat [NAME_OF_FILE]`
+
+# WRITE TO A FILE
+
+`echo "[CONTENT]" >> [NAME_OF_FILE]`
