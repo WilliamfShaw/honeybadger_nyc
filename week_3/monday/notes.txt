@@ -44,3 +44,52 @@
 # WRITE TO A FILE
 
 `echo "[CONTENT]" >> [NAME_OF_FILE]`
+
+
+## GIT
+
+## STATUS
+
+`git status`
+
+# COMMIT
+
+`git commit -m "[COMMIT_MESSAGE]"`
+
+# ADD
+
+`git add [NAME_OF_FILE]`
+`git add .` add all files
+
+# PUSH
+
+`git push [REMOTE] [BRANCH]`
+
+# PULL
+
+`git pull [REMOTE] [BRANCH]`
+
+# HOW TO ADD A REMOTE
+
+`git remote add [NAME_OF_REMOTE] [HTTP_LOCATION]`
+
+# INITIALIZE A GIT REPO
+
+`git init`
+
+# CLONE
+
+`git clone [HTTP_LOCATION]`
+
+# LOG
+
+`git log`
+
+## BOOTSTRAP
+
+WHERE TO GET BOOTSTRAP STUFFS === https://v4-alpha.getbootstrap.com/
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>

@@ -1,0 +1,17 @@
+body {
+    background-color: red;
+}
+
+.row {
+    border: 1px solid black;
+}
+
+.red {
+    height: 200px;
+    background-color: cornflowerblue;
+}
+
+.blue {
+    height: 200px;
+    background-color: coral;
+}
