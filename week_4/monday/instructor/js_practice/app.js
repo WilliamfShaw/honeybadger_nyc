@@ -26,3 +26,18 @@ if (true || false) {
 } else {
     console.log('TACOOOOOOSSS');
 }
+
+var x = sprompt('can i have a number');
+
+
+// TEMP
+var temp = prompt('WHAT TEMP?');
+var scale = prompt('WHAT SCALE?').toLowerCase();
+
+if (scale === 'c to f') {
+    // do celcius to far
+} else if ( scale === 'f to c') {
+    // do far to cel
+} else {
+
+}
