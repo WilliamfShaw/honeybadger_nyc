@@ -18,7 +18,7 @@ Before starting to code, take some time to read through this exercise and model 
 #### Step 2 - Code
 
 - When the program begins a menu should be prompted displaying:
-  - A list of three trains - `The (L) Train, The (N) Train, The (S)ix Train`
+  - A list of three trains -  
   - The user should then be prompted to make a selection based off of the available options.
 - When the user enters: `L`
   - The console should output a message containing the user's selection labeled as a train
