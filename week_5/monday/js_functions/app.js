@@ -60,3 +60,15 @@ function reverser(string){
     const reversedStringArray = splitString.reverse();
     return reversedStringArray.join('')
 }
+
+// WRITE A FUNCTION doSomethingNtimes that accepts two arguments, a function and number indicating how many 
+// times to run the callback, it should run the callback that many times
+
+function doSomethingNtimes(cb, num) {
+    for(let i = 0; i < num; i++) {
+        cb();
+    }
+}
+
+
+
