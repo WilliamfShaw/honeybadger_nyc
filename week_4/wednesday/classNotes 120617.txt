@@ -1,0 +1,6 @@
+data storage -
+
+1. arrays
+
+2. objects
+
