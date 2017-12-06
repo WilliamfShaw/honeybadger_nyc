@@ -100,3 +100,7 @@ function doSomethingNtimes(cb, num) {
         cb();
     }
 }
+
+function callBackWithArg(cb, arg) {
+    return cb(arg);
+}
