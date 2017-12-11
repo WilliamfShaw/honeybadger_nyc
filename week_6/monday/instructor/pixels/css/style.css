@@ -1,0 +1,14 @@
+#container {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  float: left;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
