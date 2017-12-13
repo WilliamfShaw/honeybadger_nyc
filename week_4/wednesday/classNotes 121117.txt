@@ -1,0 +1,19 @@
+every element(tags) we put dom are called "node"
+
+manipulate these nodes (p, footer, header) - tags
+
+works in a tree base structure. the dom start
+
+.querySelector - pulls the 1st item found not all if you want all you must use
+.querySelectorAll()
+
+access what's inside the tags, tell me what's between the opening and closing tags --> innerHTML
+editing contents of a node (tag), if i wanted to update the value of that key (heading.innterHTML) =
+
+similar to:
+
+var catName = "Lucy"
+var catName = "Bobby"
+
+
+
