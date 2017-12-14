@@ -1,0 +1,5 @@
+Scope
+
+global - accessible everywhere
+
+block scope - functions set (let/const) are  not available globally

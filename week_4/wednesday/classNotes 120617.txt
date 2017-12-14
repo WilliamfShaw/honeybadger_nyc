@@ -1,0 +1,36 @@
+Class 12/6/17-Wednesday 
+
+Data storage -
+
+1. arrays
+
+2. objects - 
+syntax is the same we use for block. {} indicate there's an object here some form of storage system
+main benefit of an object. information is stored in key valued pairs. 
+the left hand assignnment of an object. 
+
+example: 
+
+const obj = {
+	tacos: "whatever"
+
+}
+
+for the keys i.e. tacos you can not use "_" or "-" -- standard use camel case. 
+
+tacos-example - NO
+tacos_example - NO
+"tacos" - 	YES (string)
+tacosYes	YES (camel case)
+
+***A string can be a key, a number can be a key
+
+to access a key with [] with square brackets
+
+obj["tacos"} to access the object "tacos"
+
+
+
+
+
+

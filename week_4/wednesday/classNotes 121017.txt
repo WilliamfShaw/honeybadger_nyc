@@ -1,0 +1,98 @@
+lesson 12/10/17 - Sunday
+
+Notes:
+
+Objects are dictionary, find value of a key (definition)
+defined by " { "
+
+look things up by their key. to look-up
+
+const myobj = {
+taco: "food delicious"
+pizza: "the best"
+"special-character": "special" 
+}
+
+no special characters for "object number" assignment of keys
+only (_)
+
+console.log(myObj.taco);
+console.log(myObj['pizza']);
+console.log(myobj['special-characters']);
+
+to add a key 
+myObj.cake = "CAKE"
+
+overrite
+myObj.taco = "coookie"
+
+** Constructors
+Constructors are blueprint/template and called by the keyword "new"
+
+function Person(){
+	this.name = name;
+	this.age = age;
+	this.height = height;
+}
+
+const gina = new Person ('gina', 31, '7ft')
+const matt = new Person ('matt', 37, '8ft')
+
+most objects has some form of functunality
+
+2 Ways to add functunality 
+
+1.
+this.doSomething = function (){
+
+}
+writing the function multiple times
+
+
+2.
+Person.prototype.doSomethingElse = function(){
+}
+written once and every object shares the prototype
+
+
+NEW VERSION OF JAVASCRIPT - CREATING CONSTRUCTOR FUNCTION
+class Person {
+	constructor(name, age, height) {
+	this.name = name;
+	this.age = age;
+	this.height = height;
+}
+
+doSomething() {
+// do something
+}
+
+doSomethingElse(){
+// do something else
+}
+
+these two (functions doSomething & doSomethingElse) add to the prototype not to the constructor itself
+
+
+
+**OOP (object orient programming)
+class Car{
+	constructor(make, model, color) {
+		this.make = make;
+		this.model = model;
+		this.color = color;
+  }
+
+	paint(newColor) {
+		this.color = newColor;
+}
+}
+
+//every carowner is a person, in inherit from "Person"
+
+
+	class CarOwner extends Person{
+	constructor(){
+	super()
+	
+}
