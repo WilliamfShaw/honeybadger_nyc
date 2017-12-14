@@ -1,0 +1,16 @@
+body {
+  background: url('http://www.lord-of-the-rings.org/collections/maps/map10[1].jpg');
+  /*color: white;*/
+  font-size: 24px;
+  text-shadow: 1px 1px white;
+  font-weight: 800;
+}
+
+h1 {
+  font-family: 'Condiment', cursive;
+}
+
+button {
+  display: inline;
+  margin: 12px;
+}
