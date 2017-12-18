@@ -1,0 +1,32 @@
+.left, .right {
+	width: 45%;
+	height: 300px;
+	margin: 30px 2%;
+	float: left;
+}
+
+.list {
+	font-family: Comic Sans MS;
+}
+
+.excited {
+	font-family: Impact;
+	font-size: 40px;
+}
+
+#swag {
+	background: url(http://media.giphy.com/media/Hb3ZHwrYjj7Bm/giphy.gif);
+	background-size: contain;
+	position: absolute;
+	bottom: 10px;
+}
+
+.circle {
+	width: 300px;
+	height: 300px;
+	border-radius: 100%;
+}
+
+ul {
+	box-sizing: border-box;
+}

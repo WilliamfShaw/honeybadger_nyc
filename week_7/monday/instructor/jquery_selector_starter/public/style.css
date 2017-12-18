@@ -1,0 +1,14 @@
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	background: slategrey;
+}
+
+.soft-square {
+	border-radius: 5px;
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	border: 2px solid firebrick;
+}
