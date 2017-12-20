@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Economica:400,700);
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+#banner {
+  width: 500px;
+  height: 215px;
+  margin: 0 auto;
+}
+
+.account {
+  width: 33%;
+  height: 400px;
+  margin-left: 10%;
+  float: left;
+  text-align: center;
+  border: 5px solid antiquewhite;
+  background: aliceblue;
+}
+
+h1 {
+  font-size: 64px;
+  font-family: Economica;
+  font-weight: 700;
+}
+
+input {
+  width: 70%;
+  height: 30px;
+  text-align: center;
+  font-size: 25px;
+  margin: 1% 12%;
+}
+button {
+  font-size: 30px;
+  font-family: Economica;
+  font-weight: 400;
+  width: 25%;
+}
