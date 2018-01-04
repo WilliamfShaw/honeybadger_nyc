@@ -1,6 +1,4 @@
 $(function() {
-	gifTemplate = Handlebars.compile($('#gif-template').html());
-
 	$('#search-box').on('click', '#search', search);
 	$('#search-box').on('keypress', function(event) {
 		if (event.keyCode === 13) { search(); }
@@ -12,18 +10,6 @@ $(function() {
 
 	$('#gif-container').on('click', 'button', toggleUrl);
 });
-
-// Set on initialize
-var gifTemplate;
-
-// Toggle between url for animated and static gif images
-var toggleUrl = function() { $(this).siblings('img').attr('src', $(this).attr('data-value')); };
-
-// Error message to be logged to the console
-// in the event of an AJAX error ( 404 )
-var errorMessage = function(error) {
-	console.log('There was a problem:', error.statusText);
-};
 
 // Performs an AJAX request to the giphy api
 // endpoint: http://api.giphy.com/v1/gifs/random
