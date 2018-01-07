@@ -15,6 +15,6 @@ $(function() {
     });
 
     result.then(function(data) {
-        console.log(data.data);
+        console.log(data.datax``);
     })
 })
