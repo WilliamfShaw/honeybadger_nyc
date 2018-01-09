@@ -53,4 +53,18 @@ $(function() {
         .then(transformWeatherData)
         .then(renderWeatherData)
     ;
+
+
+    const result = $.ajax({
+        url: 'https://api.openweathermap.org/data/2.5/weather',
+        data: {
+            q: city,
+            APPID: apiKey,
+            units: 'imperial'
+        },
+        dataType: 'json',
+        method: 'GET'
+    });
+
+    return result;
 })
