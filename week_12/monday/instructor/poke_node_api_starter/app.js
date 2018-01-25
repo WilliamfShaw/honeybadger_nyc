@@ -34,7 +34,8 @@ app.get('/pokemons/byType/:type', function (req, res) {
 //
 app.get('/pokemons/random', function(req, res) {
     const index = Math.floor(Math.random() * pokemon.length);
-    res.send(pokemon[index]);
+    const html =   `<div style="background-color: red;">HELLLLLOOOOO</div>`
+    res.send(html);
 });
 
 // BE ABLE TO SEARCH FOR A POKEMON BY ID
