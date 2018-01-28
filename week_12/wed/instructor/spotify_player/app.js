@@ -24,26 +24,53 @@ function getAccessToken() {
     })
 }
 
+function getRequestOptions(url, access_token, queryOptions = {}) {
+    var options = {
+        url: url,
+        qs: queryOptions,
+        headers: {
+            'Authorization': `Bearer ${access_token}`
+        },
+        json: true
+    };
+
+    return options;
+}
+
+function getArtistByName(access_token, artist) {
+    var options = getRequestOptions('https://api.spotify.com/v1/search', access_token, { q: artist, type: 'artist' })
+
+    return request(options).then(function(artistData) {
+        return artistData;
+    });
+}
+
+function getTopTracks(access_token, id) {
+    var options = getRequestOptions(`https://api.spotify.com/v1/artists/${id}/top-tracks`, access_token, { country: 'US'});
+
+    return request(options).then(function(topTracks) {
+        return topTracks;
+    })
+}
+
 app.get('/:artist', function(req, res) {
     const artist = req.params.artist;
+    let _access_token;
+    getAccessToken()
+    .then(function(access_token) {
+        _access_token = access_token;
+        console.log(access_token);
 
-    getAccessToken().then(function(access_token) {
-        var options = {
-            url: 'https://api.spotify.com/v1/search',
-            qs: {
-                q: artist,
-                type: 'artist'
-            },
-            headers: {
-                'Authorization': `Bearer ${access_token}`
-            },
-            json: true
-        };
-
-        return request(options).then(function(artistData) {
-            return artistData;
+            return getArtistByName(_access_token, artist)
         })
-    })
+        .then(function(data) {
+            const id = data.artists.items[0].id;
+
+            return getTopTracks(_access_token, id);
+        })
+        .then(function(topTracks) {
+            res.send(topTracks);
+        })
 });
 
 app.listen(3000, function() {
