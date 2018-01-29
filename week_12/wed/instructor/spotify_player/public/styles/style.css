@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+}
+
+.album-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: cornflowerblue;
+    margin: 0;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
