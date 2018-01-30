@@ -10,6 +10,7 @@ const app = express();
 app.use(logger('dev'));
 app.engine('handlebars', exphbs({defaultLayout: 'index'}));
 app.set('view engine', 'handlebars');
+app.use(express.static('public'));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 var authOptions = {
@@ -62,7 +63,10 @@ function getTopTracks(access_token, id) {
 function normalizeTrackData(track) {
     const {
         album: {
-            name: albumName
+            name: albumName,
+            images: [{
+                url: albumArtUrl
+            }]
         },
         name: trackName,
         artists: [{
