@@ -17,11 +17,12 @@ router.get('/:id', function (req, res) {
 });
 
 /* GET users listing. */
-router.get('/:first_name/:last_name/:email', function(req, res, next) {
+router.post('/', function(req, res, next) {
+  console.log(req.body)
     const params = {
-      firstName: req.params.first_name,
-      lastName: req.params.last_name,
-      email: req.params.email
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email
     };
 
     User.create(params)
