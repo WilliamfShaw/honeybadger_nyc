@@ -12,7 +12,6 @@ class NewCardInput extends Component {
     }
 
     handleSubmit(e) {
-        console.log(JSON.stringify(this.state));
         fetch('/cards', {
             method: 'POST',
             headers: {

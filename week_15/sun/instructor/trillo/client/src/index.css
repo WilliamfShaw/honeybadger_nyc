@@ -37,14 +37,11 @@ h1, p {
 
 .column {
   box-sizing: content-box;
-
   float: left;
   width: 40%;
   margin: 24px;
   padding: 24px;
-
   border-radius: 10px;
-
   background-color: #ddd;
   color: #444;
 }
