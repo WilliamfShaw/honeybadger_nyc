@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 const Human = require('../models/index').human;
 
-function getBodyParams(req) {
-    const { name, age, status, portrait } = req.body;
+function getBodyParams({ name, age, status, portrait }) {
     return {
         name,
         age,
