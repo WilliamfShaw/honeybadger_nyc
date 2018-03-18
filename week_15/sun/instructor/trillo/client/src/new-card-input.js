@@ -23,6 +23,7 @@ class NewCardInput extends Component {
             this.setState({
                 task: ''
             });
+            this.props.getCards();
         });
     }
 
