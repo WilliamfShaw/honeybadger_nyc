@@ -3,12 +3,10 @@
 
 Now that we've told our application where the point of entry is for the view layer, lets make the component that we referenced in the `index.js` file
 
-- In your `components` folder, make a file called `app.jsx`
+- In your `components` folder, make a file called `app.js`
 - We need to import a few things in order for this file to work. At the top of this file, import `React` for now
 - `App` will be a dummy component
 - For now lets have the App return a `div` with an `h1` inside with the `id` of logo, that says `Todays Hacker News`
-- Lets run the following command in our terminal to start the webpack server `npm run dev`
-- In Chrome navigate to `127.0.0.1:8080`, this is the equivalent of `localhost:8080` try both our and see for yourself
 
 ### Step 5
 #### Lets think about how to structure the rest of this app
@@ -29,9 +27,9 @@ Lets discuss this a little further as a team!!!
 ### Step 6
 #### Making our `ArticleList` Component
 
-- In the `components` folder create a file called `article_list.jsx`
-- `ArticleList` will need the following imports `React`, `superagent` as `request`
-- `ArticleList` will need a `constructor` a mandatory `render` and a `componentWillMount` life cycle method.
+- In the `components` folder create a file called `article_list.js`
+- `ArticleList` will need the following imports `React`
+- `ArticleList` will need a `constructor` a mandatory `render` and a `componentDidMount` life cycle method.
 - Be sure to `export` `ArticleList` at the bottom of the file.
 - Go back to the `App` component and `import` the newly created `ArticleList` file as `ArticleList`
 
@@ -43,7 +41,7 @@ Lets discuss this a little further as a team!!!
 - `constructor`
     - will call `super`
     - will set `state` of the component with `data` set to an empty array
-- `componentWillMount`
+- `componentDidMount`
     - will make a request to the proper Hacker News endpoint to get all of todays `top stories`
     - then it will set the state of `data` in this component to the body of the returned information
 - `render`
@@ -63,7 +61,7 @@ Lets discuss this a little further as a team!!!
     - will call `super` which accepts a `props` argument
     - will set `state` of the component with `data` set to an empty object
     - will set `state` of the component with `modalOpen` set to `false`
-- `componentWillMount`
+- `componentDidMount`
     - will make a request to the proper Hacker News endpoint to get the individual article from the `id` being passed through props
     - then it will set the state of `data` in this component to the body of the returned information
 - `openModal`
