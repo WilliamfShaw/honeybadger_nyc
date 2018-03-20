@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Article from './article';
 
 class ArticleList extends Component {
     constructor(props) {
@@ -21,7 +22,18 @@ class ArticleList extends Component {
 
     render() {
         return (
-            <h1>ARTICLE LIST</h1>
+            <div>
+                {
+                    this.state.data.map((articleId) => {
+                        return (
+                            <Article
+                                key={articleId}
+                                articleId={articleId}
+                            />
+                        )
+                    })
+                }
+            </div>
         );
     }
 }
