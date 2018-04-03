@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "tweedr",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "tweedr",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "tweedr",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
