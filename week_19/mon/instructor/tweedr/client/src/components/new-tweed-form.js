@@ -21,7 +21,6 @@ class NewTweedForm extends Component {
     }
 
     handleSubmit() {
-        console.log(this.state);
         this.props.createNewTweed(this.state);
     }
 

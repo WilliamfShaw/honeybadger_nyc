@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewTweedForm from './new-tweed-form';
+import TweedView from './tweed-view';
 
 class Tweedr extends Component {
     constructor(props){
@@ -10,6 +11,7 @@ class Tweedr extends Component {
         }
 
         this.createNewTweed = this.createNewTweed.bind(this);
+        this.deleteTweed = this.deleteTweed.bind(this);
     }
 
     async getAllTweeds() {
@@ -30,7 +32,6 @@ class Tweedr extends Component {
     }
 
     async createNewTweed(tweedBody) {
-        console.log(tweedBody)
         await fetch('/tweeds', {
             method: 'POST',
             headers: {
@@ -43,7 +44,9 @@ class Tweedr extends Component {
         this.getAllTweeds();
     }
 
-    async deleteTweed(tweedId) {
+    async deleteTweed(e) {
+        const tweedId = e.target.id;
+
         await fetch(`/tweeds/${tweedId}`, {
             method: 'DELETE',
             headers: {
@@ -65,6 +68,19 @@ class Tweedr extends Component {
                 <NewTweedForm
                     createNewTweed={this.createNewTweed}
                 />
+                { this.state.tweeds.reverse().map((tweed) => {
+                    const { content, author, id } = tweed;
+
+                    return (
+                        <TweedView
+                            key={id}
+                            content={content}
+                            author={author}
+                            deleteTweed={this.deleteTweed}
+                            id={id}
+                        />
+                    )
+                })}
             </div>
         )
     }
