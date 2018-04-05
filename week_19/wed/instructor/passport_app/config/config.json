@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "passport_app",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "passport_app",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "passport_app",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
