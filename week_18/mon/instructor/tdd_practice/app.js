@@ -8,7 +8,17 @@ function methodToTest(a, b, c) {
     return a + b + c;
 }
 
+function sinonSpy() {
+    Date.now();
+}
+
+function sinonStub() {
+    return Date.now();
+}
+
 module.exports = {
     sortArray,
-    methodToTest
+    methodToTest,
+    sinonSpy,
+    sinonStub
 }

@@ -1,37 +1,35 @@
 class Calculator {
-	constructor() {}
+	add(a, b) {
+		return a + b;
+	}
 
-  add(num1, num2){
-    return num1 + num2;
-  }
+	subtract(a, b) {
+		return a - b;
+	}
 
-  subtract(num1, num2) {
-  	return num1 - num2;
-  }
+	multiply(a, b) {
+		return a * b;
+	}
 
-  multiply(num1, num2) {
-  	return num1 * num2;
-  }
+	divide(a, b) {
+		return a / b;
+	}
 
-  divide(num1, num2) {
-  	return(num1/num2);
-  }
+	square(a) {
+		return Math.pow(a, 2);
+	}
 
-  square(num) {
-  	return Math.pow(num, 2);
-  }
+	exponential(a, b) {
+		return Math.pow(a, b);
+	}
 
-  exponential(num1, num2) {
-  	return Math.pow(num1, num2);
-  }
+	isGreaterThan(a, b) {
+		return Math.max(a, b);
+	}
 
-  isGreaterThan(num1, num2) {
-  	return Math.max(num1, num2);
-  }
-
-  isNegative(num) {
-  	return 0 > num;
-  }
+	isNegative(a) {
+		return 0 > a;
+	}
 }
 
 module.exports = Calculator;
