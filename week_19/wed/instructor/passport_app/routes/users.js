@@ -9,7 +9,7 @@ module.exports = function(passport) {
 
     // POST /user/login
     router.post('/login',  passport.authenticate('local-login'), function(req, res) {
-            res.json({user: req.user})
+        res.json({user: req.user})
     });
 
     return router;
