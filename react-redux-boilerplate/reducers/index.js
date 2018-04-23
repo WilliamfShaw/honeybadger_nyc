@@ -1,13 +1,20 @@
 // reducers/index.js
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT, CLEAR } from '../actions';
 
-const initialState = 0;
-export default (state = initialState, action) => {
+export default (state = { counter: 0 }, action) => {
   switch (action.type) {
     case INCREMENT:
-      return state + 1;
+      return Object.assign({}, state, {
+        counter: state.counter + action.value
+      });
     case DECREMENT:
-      return state - 1;
+      return Object.assign({}, state, {
+        counter: state.counter - action.value
+      });
+    case CLEAR:
+      return Object.assign({}, state, {
+        counter: 0
+      });
     default:
       return state;
   }
