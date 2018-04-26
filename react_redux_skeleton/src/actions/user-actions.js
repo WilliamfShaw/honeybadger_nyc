@@ -1,7 +1,6 @@
 export const fetchUserType = 'FETCH_USER_FULFILLED';
 
 export function fetchUser() {
-    console.log('sifjlkfwlfj')
     return {
         type: fetchUserType,
         payload: {

@@ -6,7 +6,9 @@ export const fetchTweetsRejectedType = 'FETCH_TWEETS_REJECTED';
 
 export function fetchTweets() {
     return function(dispatch) {
-        axios.get('http://rest.learncode.academy/api/reacttest/tweets')
+        dispatch({ type: fetchTweetsType })
+
+        axios.get('/tweets')
             .then((response) => {
                 dispatch({type: fetchTweetsFulfilledType, payload: response.data });
             })
