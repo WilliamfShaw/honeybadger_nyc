@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   tweet.associate = function(models) {
     // associations can be defined here
+    tweet.belongsTo(models.user, { foreignKey: 'user_id' });
   };
   return tweet;
 };
