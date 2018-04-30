@@ -1,63 +1,25 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as userActions from '../actions/user-actions';
-import * as tweetActions from '../actions/tweets-actions';
+import { Route, Link } from 'react-router-dom';
+import Home from './home';
+import Signup from './user_credentials/signup';
+import Login from './user_credentials/login';
 
-class Layout extends Component {
-    constructor(props) {
-        super(props);
+const Layout = () => {
+    return (
+        <div>
+            <header>
+                <Link to='/'>Home</Link>
+                <Link to='/signup'>Sign up</Link>
+                <Link to='/login'>Log in</Link>
+            </header>
 
-        this.fetchTweets = this.fetchTweets.bind(this);
-    }
-
-    componentWillMount() {
-        this.props.userActions.fetchUser();
-        this.fetchTweets();
-    }
-
-    fetchTweets() {
-        this.props.tweetsActions.fetchTweets();
-    }
-
-    updateUserName() {
-        this.props.userActions.setUserName('John');
-    }
-
-    render() {
-        const { user, tweets } = this.props;
-
-        const mappedTweets = tweets.map(tweet => {
-            return (
-                <li key={tweet.id}>
-                    <span>{tweet.content}</span>
-                    <br/>
-                    <span>{tweet.author}</span>
-                </li>
-            )
-        });
-
-        return (
-            <div>
-                <ul>{mappedTweets}</ul>
-            </div>
-        )
-    }
+            <main>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/signup' component={Signup} />
+                <Route exact path='/login' component={Login} />
+            </main>
+        </div>
+    )
 }
 
-function mapStateToProps(state) {
-    return {
-        user: state.user.user,
-        userFetched: state.user.fetched,
-        tweets: state.tweets.tweets
-    }
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        userActions: bindActionCreators(userActions, dispatch),
-        tweetsActions: bindActionCreators(tweetActions, dispatch)
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Layout);
+export default Layout;
