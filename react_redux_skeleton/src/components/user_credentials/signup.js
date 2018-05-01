@@ -7,8 +7,7 @@ import * as userActions from '../../actions/user-actions';
 
 class Signup extends Component {
     formHandler(values) {
-        console.log(values);
-        // this.props.changePage('/');
+        this.props.userActions.createUser(values);
     }
 
     render() {
